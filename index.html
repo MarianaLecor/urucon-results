@@ -4,9 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>References | IEEE URUCON 2026</title>
+
+    <title>IEEE URUCON 2026 | Supplementary Results</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             max-width: 850px;
@@ -17,17 +22,250 @@
             background-color: #FFFFFF;
         }
 
+        .conference {
+            color: #F25500;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
         h1 {
             color: #07225B;
             border-bottom: 3px solid #F25500;
-            padding-bottom: 12px;
+            padding-bottom: 14px;
+            margin-bottom: 16px;
+            line-height: 1.2;
         }
 
+        .paper-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 36px;
+        }
+
+        .intro {
+            margin: 30px 0 42px;
+        }
+
+        .intro h2 {
+            color: #07225B;
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .intro p {
+            color: #444;
+            margin-top: 8px;
+        }
+
+        h2.section-title {
+            color: #07225B;
+            margin-top: 38px;
+            margin-bottom: 12px;
+            font-size: 22px;
+            line-height: 1.3;
+        }
+
+        .section-number {
+            color: #F25500;
+            margin-right: 8px;
+        }
+
+        p {
+            margin-top: 10px;
+            margin-bottom: 18px;
+        }
+
+        section {
+            margin-bottom: 48px;
+        }
+
+        .figure,
+        .video-block {
+            margin: 24px 0 30px;
+        }
+
+        .figure img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+        }
+
+        .simulation-video {
+            display: block;
+            width: 100%;
+            height: auto;
+            background-color: #151515;
+            border-radius: 6px;
+        }
+
+        .figure-caption {
+            font-size: 13px;
+            color: #666;
+            margin-top: 12px;
+            line-height: 1.5;
+            text-align: left;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #E5E7EB;
+            margin: 40px 0;
+        }
+
+        footer {
+            border-top: 1px solid #E5E7EB;
+            padding-top: 20px;
+            margin-top: 50px;
+            font-size: 13px;
+            color: #777;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                margin: 12px auto;
+                padding: 18px;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+
+            h2.section-title {
+                font-size: 20px;
+            }
+
+            .intro h2 {
+                font-size: 21px;
+            }
+
+            .paper-title {
+                font-size: 15px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
+    <header>
+        <div class="conference">IEEE URUCON 2026</div>
+
+        <h1>Supplementary Results</h1>
+
+        <p class="paper-title">
+            Supervisory Model for Tire Dynamic Condition
+            in a Racing Single-Seater
+        </p>
+    </header>
+
+    <main>
+
+        <!-- INTRODUCTION -->
+
+        <div class="intro">
+            <h2>Curious to explore further?</h2>
+
+            <p>
+                Some details couldn't fit into the poster, so this page
+                brings together additional visualizations and simulation
+                material from the study, offering a closer look at the
+                work behind the results.
+            </p>
+        </div>
+
+        <!-- SECTION 1: CURVATURE ESTIMATION -->
+
+        <section id="trajectory-reconstruction">
+
+            <h2 class="section-title">
+                <span class="section-number">01.</span>
+                Trajectory Reconstruction and Curvature Estimation
+            </h2>
+
+            <p>
+                The local curvature radius was estimated iteratively
+                using three consecutive points of the reconstructed
+                trajectory. This procedure allowed the identification
+                of local curvature centers and supported the
+                calculation of the steering vector along the circuit.
+            </p>
+
+            <figure class="figure">
+                <img
+                    src="images/radios_centros_curvatura.png"
+                    alt="Estimated curvature centers along the reconstructed Red Bull Ring trajectory"
+                    loading="lazy"
+                >
+
+                <figcaption class="figure-caption">
+                    <strong>Figure 1.</strong>
+                    Reconstructed trajectory and estimated local
+                    centers of curvature obtained through an
+                    iterative three-point geometric procedure.
+                </figcaption>
+            </figure>
+
+        </section>
+
+        <hr class="divider">
+
+        <!-- SECTION 2: SIMULATION -->
+
+        <section id="simulation-visualization">
+
+            <h2 class="section-title">
+                <span class="section-number">02.</span>
+                Vehicle Trajectory and Dynamic Response Visualization
+            </h2>
+
+            <p>
+                Simulation of a reconstructed lap of the Red Bull Ring,
+                displaying vehicle trajectory, steering angle,
+                longitudinal and lateral velocities, and dynamic
+                load factor.
+            </p>
+
+            <figure class="video-block">
+
+                <video
+                    class="simulation-video"
+                    controls
+                    preload="metadata"
+                    playsinline
+                >
+                    <source
+                        src="Videos/Recorrido, velocidades y factor de carga.mp4"
+                        type="video/mp4"
+                    >
+
+                    Your browser does not support HTML5 video.
+                </video>
+
+                <figcaption class="figure-caption">
+                    <strong>Video 1.</strong>
+                    MATLAB/Simulink simulation showing the
+                    reconstructed trajectory and the evolution
+                    of vehicle motion variables throughout the lap.
+                </figcaption>
+
+            </figure>
+
+        </section>
+
+    </main>
+
+    <footer>
+        IEEE URUCON 2026 | Mariana Lecor
+        <p>
+            Supplementary material for the research poster.
+        </p>
+    </footer>
 
 </body>
 </html>
